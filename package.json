@@ -1,9 +1,11 @@
 {
   "name": "gulp-sync-env",
-  "version": "0.0.1",
-  "description": "A plugin for Gulp",
+  "version": "1.0.5",
+  "description": "Synchronize .env files",
   "keywords": [
-    "gulpplugin",
+    "gulp",
+    "synchronize",
+    ".env",
     "laravel"
   ],
   "author": " (https://github.com/303K)",
