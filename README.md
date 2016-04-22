@@ -14,13 +14,14 @@ npm install --save-dev gulp-sync-env
 Then, add it to your `gulpfile.js`:
 
 ```javascript
-var sync-env = require("gulp-sync-env");
+var syncEnv = require('gulp-sync-env');
+var gulp = require('gulp');
 
-gulp.src("./src/*.ext")
-	.pipe(sync-env({
-		msg: "Hello Gulp!"
-	}))
-	.pipe(gulp.dest("./dist"));
+gulp.task('default', function(){
+    gulp.src('.env')
+    .pipe(syncEnv('.env-example'))
+      .pipe(gulp.dest(''));
+});
 ```
 
 ## API
@@ -29,9 +30,9 @@ gulp.src("./src/*.ext")
 
 #### options.msg
 Type: `String`  
-Default: `Hello World`
+Default: `.env-example`
 
-The message you wish to attach to file.
+The name of the saved file.
 
 
 ## License
