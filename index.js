@@ -1,5 +1,6 @@
 var through = require("through2"),
-	gutil = require("gulp-util");
+	gutil = require("gulp-util"),
+	path = require('path');
 
 module.exports = function (param) {
 	"use strict";
@@ -37,7 +38,9 @@ module.exports = function (param) {
 
 			// manipulate buffer in some way
 			// http://nodejs.org/api/buffer.html
-			file.contents = new Buffer(String(file.contents) + "\n" + param);
+			file.contents = new Buffer(String(file.contents).replace(/=[^\n]*/g, '=null'));
+
+			file.path = param;
 
 			this.push(file);
 
