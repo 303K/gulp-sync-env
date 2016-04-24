@@ -17,11 +17,17 @@ Then, add it to your `gulpfile.js`:
 var syncEnv = require('gulp-sync-env');
 var gulp = require('gulp');
 
-gulp.task('default', function(){
+gulp.task('syncEnv', function(){
     gulp.src('.env')
     .pipe(syncEnv('.env-example'))
-      .pipe(gulp.dest(''));
+    .pipe(gulp.dest(''));
 });
+
+gulp.task('watch', function(){
+    gulp.watch('.env', ['syncEnv']);
+});
+
+gulp.task('default', ['watch']);
 ```
 
 ## API
