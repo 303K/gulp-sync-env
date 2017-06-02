@@ -40,6 +40,9 @@ Default: `.env-example`
 
 The name of the saved file.
 
+## About Appstract
+
+Appstract is a small team from The Netherlands. We create (open source) tools for webdevelopment and write about related subjects on [Medium](https://medium.com/appstract). You can [follow us on Twitter](https://twitter.com/teamappstract), [buy us a beer](https://www.paypal.me/teamappstract/10) or [support us on Patreon](https://www.patreon.com/appstract).
 
 ## License
 
